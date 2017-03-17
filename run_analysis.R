@@ -98,5 +98,5 @@ names(meanAndStdData) = mdFeatureNames
 summaryDataSet = meanAndStdData %>% group_by(activity,subject) %>% summarize_each(funs(mean))
 
 # write dataset to a file
-write.csv(summaryDataSet, "./MeanSummaryDataSet.csv")
+write.table(summaryDataSet, "./MeanSummaryDataSet.txt", row.name=FALSE)
 
