@@ -15,7 +15,7 @@ The original experiment had a 561 value feature vector for each subject for each
 2.  labeled all the variables in the dataset with descriptive strings from a vector features file. 
 3.  added a variable column that identified the subject for each observation and a variable column that described the activity that the subject was performing. Activity names were set to descriptive strings.
 4. From the big dataset it extracted just the measurements of mean and standard deviation. It tweaked the variables names a bit (removed "(),-") and standardized on CamelCap names. 
-5. Finally, it worked with the variables extracted in step 4 to create a new dataset with the average of each variable for each activity and each subject. It wrote the dataset to a file named *MeanSummaryDataSet.csv*.
+5. Finally, it worked with the variables extracted in step 4 to create a new dataset with the average of each variable for each activity and each subject. It wrote the dataset to a file named *MeanSummaryDataSet.txt*.
 
 *MeanSummaryDataSet.csv* has a 68 value feature vector for each subject/activity pair.
 
