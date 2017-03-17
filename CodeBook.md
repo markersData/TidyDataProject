@@ -2,7 +2,7 @@
 
 The data used in this project originally came from the UCI HAR Dataset, dowloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 This is a dataset is also described as Human Activity Recognition Using Smartphones Dataset
-Version 1.0. The script **run_analysis.R** was created in this project to manipulate the UCI HAR Dataset to create a second, independent tidy data set *meanAndStdData*, with the average of each variable related to mean or standard deviation for each activity and each subject of the UCI HAR Dataset.
+Version 1.0. The script **run_analysis.R** was created in this project to manipulate the UCI HAR Dataset to create a second, independent tidy data set *meanAndStdData*, which lists the average of each variable related to mean or standard deviation (in the UCI HAR Dataset) for each activity for each subject of that Dataset.
 
 As described in the original UCI HAR dataset README file:
 
@@ -17,7 +17,7 @@ The original experiment had a 561 value feature vector for each subject for each
 4. From the big dataset it extracted just the measurements of mean and standard deviation. It tweaked the variables names a bit (removed "(),-") and standardized on CamelCap names. 
 5. Finally it created a new dataset with the average of each variable for each activity and each subject and wrote the dataset to a file named *MeanSummaryDataSet.csv*.
 
-*MeanSummaryDataSet.csv* has a 68 value feature vector for each subject/activity pair.
+*MeanSummaryDataSet.csv* has a 68 value feature vector for each subject/activity pair, including activity and subject.
 
 Its features are:
 
