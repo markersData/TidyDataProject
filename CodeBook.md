@@ -2,7 +2,7 @@
 
 The data used in this project originally came from the UCI HAR Dataset, dowloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 This is a dataset is also described as Human Activity Recognition Using Smartphones Dataset
-Version 1.0. The script ##run_analysis.R## was created in this project to manipulate the UCI HAR Dataset to create a second, independent tidy data set  #meanAndStdData#, with the average of each variable related to mean or standard deviation for each activity and each subject of the UCI HAR Dataset.
+Version 1.0. The script **run_analysis.R** was created in this project to manipulate the UCI HAR Dataset to create a second, independent tidy data set *meanAndStdData*, with the average of each variable related to mean or standard deviation for each activity and each subject of the UCI HAR Dataset.
 
 As described in the original UCI HAR dataset README file:
 
@@ -10,3 +10,48 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 The original experiment had a 561 value feature vector for each subject for each activity the subject participated in.
 
+**run_analysis.R** did the following:
+1.  merged test and training data from the UCI HAR Dataset into one big data set.  
+2.  labeled all the variables in the dataset with descriptive strings from a vector features file. 
+3.  added a variable column that identifies the subject id for each observation and a variable column that describes the activity that the subject was performing when the other variables values were measured. Activity names were set to descriptive strings.
+4. From the big dataset it extracted just the measurements of mean and standard deviation. It tweaked the variables names a bit (removed "(),-") and standardized on CamelCap names. 
+5. Finally it created a new dataset with the average of each variable for each activity and each subject and wrote the dataset to a file named *MeanSummaryDataSet.csv*.
+
+*MeanSummaryDataSet.csv* has a 68 value feature vector for each subject/activity pair.
+
+Its features are:
+
+[1] "activity"                 "subject"                 
+ [3] "tBodyAccMeanX"            "tBodyAccMeanY"           
+ [5] "tBodyAccMeanZ"            "tBodyAccStdX"            
+ [7] "tBodyAccStdY"             "tBodyAccStdZ"            
+ [9] "tGravityAccMeanX"         "tGravityAccMeanY"        
+[11] "tGravityAccMeanZ"         "tGravityAccStdX"         
+[13] "tGravityAccStdY"          "tGravityAccStdZ"         
+[15] "tBodyAccJerkMeanX"        "tBodyAccJerkMeanY"       
+[17] "tBodyAccJerkMeanZ"        "tBodyAccJerkStdX"        
+[19] "tBodyAccJerkStdY"         "tBodyAccJerkStdZ"        
+[21] "tBodyGyroMeanX"           "tBodyGyroMeanY"          
+[23] "tBodyGyroMeanZ"           "tBodyGyroStdX"           
+[25] "tBodyGyroStdY"            "tBodyGyroStdZ"           
+[27] "tBodyGyroJerkMeanX"       "tBodyGyroJerkMeanY"      
+[29] "tBodyGyroJerkMeanZ"       "tBodyGyroJerkStdX"       
+[31] "tBodyGyroJerkStdY"        "tBodyGyroJerkStdZ"       
+[33] "tBodyAccMagMean"          "tBodyAccMagStd"          
+[35] "tGravityAccMagMean"       "tGravityAccMagStd"       
+[37] "tBodyAccJerkMagMean"      "tBodyAccJerkMagStd"      
+[39] "tBodyGyroMagMean"         "tBodyGyroMagStd"         
+[41] "tBodyGyroJerkMagMean"     "tBodyGyroJerkMagStd"     
+[43] "fBodyAccMeanX"            "fBodyAccMeanY"           
+[45] "fBodyAccMeanZ"            "fBodyAccStdX"            
+[47] "fBodyAccStdY"             "fBodyAccStdZ"            
+[49] "fBodyAccJerkMeanX"        "fBodyAccJerkMeanY"       
+[51] "fBodyAccJerkMeanZ"        "fBodyAccJerkStdX"        
+[53] "fBodyAccJerkStdY"         "fBodyAccJerkStdZ"        
+[55] "fBodyGyroMeanX"           "fBodyGyroMeanY"          
+[57] "fBodyGyroMeanZ"           "fBodyGyroStdX"           
+[59] "fBodyGyroStdY"            "fBodyGyroStdZ"           
+[61] "fBodyAccMagMean"          "fBodyAccMagStd"          
+[63] "fBodyBodyAccJerkMagMean"  "fBodyBodyAccJerkMagStd"  
+[65] "fBodyBodyGyroMagMean"     "fBodyBodyGyroMagStd"     
+[67] "fBodyBodyGyroJerkMagMean" "fBodyBodyGyroJerkMagStd" 
