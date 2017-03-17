@@ -1,7 +1,7 @@
 # CodeBook
 
 The data used in this project originally came from the UCI HAR Dataset, dowloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
-This is dataset is also described as Human Activity Recognition Using Smartphones Dataset
+This dataset is also described as Human Activity Recognition Using Smartphones Dataset
 Version 1.0. The script **run_analysis.R** was created in this project to manipulate the UCI HAR Dataset to create a second, independent tidy data set *meanAndStdData*, which lists the average of each variable related to mean or standard deviation in the UCI HAR Dataset for each activity for each subject of that Dataset.
 
 The original UCI HAR dataset is described in its README file:
